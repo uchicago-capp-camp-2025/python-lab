@@ -18,28 +18,34 @@ words = [
 
 
 def main():
-    # guesses remaining
-    guesses = 3
+    # guesses remaining (start with 6)
+    guesses = 6
     # letters that have been revealed (all empty at first)
     revealed = ["_", "_", "_"]
+    # keep track of letters already guessed
     guessed = set()
 
     # pick a word at random
     #word = random.choice(words)
     word = words[0]
 
+    # play the game until they win or run out of guesses
     while guesses > 0:
         print("\n-----------------------------")
-        print("Word: ", " ".join(revealed))
-        print("Letters Guessed: ", ", ".join(sorted(guessed)))
-        print("Guesses Remaining: ", guesses)
+        print("Word:", " ".join(revealed))
+        print("Guessed:", ", ".join(sorted(guessed)))
+        # print("Guesses Remaining:", guesses)
         print()
+
+        # each round, ask for a letter, then check if it is in the word
         letter = input("Pick a letter: ")
 
         if letter in guessed:
-            print(f"Already guessed {letter}!")
+            # if the letter is already guessed, we tell them that
+            # and let them guess again
+            print(f"\nAlready guessed {letter}!")
         else:
-            # update status
+            # update guesses and count
             guessed.add(letter)
             guesses -= 1
 
@@ -51,7 +57,8 @@ def main():
             # if revealed is all letters, the player has won!
             if "_" not in revealed:
                 print(f"{word}! You Win!")
-    print(f"Sorry! The word was {word}")
+                exit()
+    print(f"\nSorry! The word was {word}")
 
 
 if __name__ == "__main__":

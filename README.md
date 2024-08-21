@@ -9,6 +9,7 @@ In this lab you will be trying to get a program running.
 ## Tips
 
 - The focus of this lab is on the workflow we discussed: run the code, see an error, diagnose & fix, repeat.
+- Remember, the '#' character is a comment. You'll notice VSCode colors everything after that on a line line differently. Code following a '#' is not run.
 - Try to do this without relying too much on external resources or tools, you of course can and will use those in the future, but for today- practice with what is in front of you.
 - Feel free to experiment and make changes to the code to better understand it!
 
