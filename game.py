@@ -34,7 +34,7 @@ def main():
         print("\n-----------------------------")
         print("Word:", " ".join(revealed))
         print("Guessed:", ", ".join(sorted(guessed)))
-        # print("Guesses Remaining:", guesses)
+        print("Guesses Remaining:", guesses)
         print()
 
         # each round, ask for a letter, then check if it is in the word
