@@ -1,6 +1,6 @@
-# CAPP Camp Python Lab
+# CAPP Camp Python Workflow Lab
 
-The goal of this lab is to help you become more comfortable with working with Python.
+The goal of this lab is to help you become more comfortable with working with Python, and the workflow introduced today.
 
 Since you are not expected to know how to write Python at this point this can feel challenging, but for this lab focus on what we've covered and feel free to discuss with peers.
 
