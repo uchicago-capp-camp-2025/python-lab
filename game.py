@@ -42,10 +42,10 @@ def main():
 
         if letter in guessed:
             # if the letter is already guessed, we tell them that
-            # and let them guess again
+            # (and let them guess again with no penalty)
             write(f"\nAlready guessed {letter}!")
         else:
-            # update guesses and count
+            # update guesses and which letters have been seen
             guessed.add(letter)
             guesses -= 1
 
@@ -54,7 +54,7 @@ def main():
                 if letter = word_letter:
                     revealed[index] = leter
 
-            # if revealed is all letters, the player has won!
+            # if revealed is only letters, the player has won!
             if "_" not in revealed:
                 print(f"{word}! You Win!")
                 exit()
