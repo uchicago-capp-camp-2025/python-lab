@@ -53,7 +53,7 @@ After fixing the two typos, you will encounter a different kind of error. A Type
 For example, there is no value Python can give for `"hello" + 123`, since this code adds variables of `str` and `int` type.
 So instead, you will see a `TypeError`.
 
-Fix the `TypeError` that arises, and you should be able to begin to play the game.
+Fix the `TypeError` that arises, and you should be able to begin to play the game.  Before you do, make another commit.
 
 ## Part 3 - Runtime Error
 
