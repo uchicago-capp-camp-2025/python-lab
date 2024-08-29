@@ -14,9 +14,9 @@ In this lab you will be trying to get a program running by correcting some error
 - Don't let the fact that you likely do not understand the code yet get in your way, focus on the error messages you receive and they'll guide you to working code.
 - Feel free to experiment and make changes to the code to better understand it! You can always use `git diff` and `git restore` to undo those changes as needed.
 
-## Part 1 - Fixing Typos
+## Part 1 - Syntax Errors
 
-There are three intentional typos in the code you've been given that you'll need to fix.
+There are two intentional typos in the code you've been given that you'll need to fix.
 
 To find these, try running the code via `python3 game.py` and look at the first error you get:
 
@@ -30,9 +30,7 @@ SyntaxError: '[' was never closed
 
 Consider what this error message is telling you, and make the appropriate fix.
 
-Once that's done, try running the code again.
-
-There are a total of three errors to fix for this portion, including the one shown above.
+Once that's done, try running the code again and you will encounter one more SyntaxError.
 
 Continue the cycle of fixing and running the program until you see no more errors and are able to play a round of the game.
 
@@ -48,7 +46,16 @@ $ git push origin master
 
 (You can also use `git commit -am "solved part 1"` to combine `git add -u` and `git commit` into a single step.)
 
-## Part 2 - Runtime Error
+## Part 2 - Type Error
+
+After fixing the two typos, you will encounter a different kind of error. A TypeError indicates that you are attempting to use data in a way that is not possible.
+
+For example, there is no value Python can give for `"hello" + 123`, since this code adds variables of `str` and `int` type.
+So instead, you will see a `TypeError`.
+
+Fix the `TypeError` that arises, and you should be able to begin to play the game.
+
+## Part 3 - Runtime Error
 
 The code should now start to run, but depending on what letter you pick it may crash.
 Unlike syntax errors which can be detected automatically, some errors only arise under precise conditions.
@@ -59,7 +66,7 @@ Try entering the letter "b" to see the program behave as expected. Keep trying l
 
 Once you trigger the crash, resolve it and make a commit the same way you did for Part 1.
 
-## Part 3 - Second Runtime Error
+## Part 4 - Second Runtime Error
 
 There's another condition that will reveal a mistake.
 For this one, we won't give you the exact condition right away, experiment with different input to try and trigger it.
@@ -72,7 +79,7 @@ If you'd like a hint take a look at hint3.md.
 
 When complete, make another commit!
 
-## Part 4 - Logic Errors
+## Part 5 - Logic Error
 
 Not all errors in code result in an error message, sometimes the code just does the incorrect thing and continues happily along.
 
