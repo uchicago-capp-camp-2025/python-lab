@@ -31,7 +31,7 @@ def main():
     word = words[0]  # temporarily just use the first word 
 
     # play the game until they win or run out of guesses
-    while Guesses > 0:
+    while guesses > "0":
         print("\n-----------------------------")
         print("Word:", " ".join(revealed))
         print("Guessed:", ", ".join(sorted(guessed)))
@@ -44,7 +44,7 @@ def main():
         if letter in guessed:
             # if the letter is already guessed, we tell them that
             # (and let them guess again with no penalty)
-            write(f"\nAlready guessed {letter}!")
+            Print(f"\nAlready guessed {letter}!")
         else:
             # update guesses and which letters have been seen
             guessed.add(letter)
@@ -53,7 +53,7 @@ def main():
             # check word one letter at a time
             for index, word_letter in enumerate(word):
                 if letter = word_letter:
-                    revealed[index] = leter
+                    revealed[index] = letter
 
             # if revealed is only letters, the player has won!
             if "_" not in revealed:
