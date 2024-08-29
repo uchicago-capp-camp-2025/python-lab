@@ -12,7 +12,7 @@ In this lab you will be trying to get a program running by correcting some error
 - Remember, the '#' character is a comment. You'll notice VSCode colors everything after that on a line line differently. Code following a '#' is not run.
 - Try to do this without relying too much on external resources or tools, you of course can and will use those in the future, but for today- practice with what is in front of you.
 - Don't let the fact that you likely do not understand the code yet get in your way, focus on the error messages you receive and they'll guide you to working code.
-- Feel free to experiment and make changes to the code to better understand it! You can always use `git diff` and `git revert` to undo those changes as needed.
+- Feel free to experiment and make changes to the code to better understand it! You can always use `git diff` and `git restore` to undo those changes as needed.
 
 ## Part 1 - Fixing Typos
 
@@ -41,9 +41,12 @@ Continue the cycle of fixing and running the program until you see no more error
 For example:
 
 ```
-$ git commit -am "solved part 1"
+$ git add -u
+$ git commit -m "solved part 1"
 $ git push origin master
 ```
+
+(You can also use `git commit -am "solved part 1"` to combine `git add -u` and `git commit` into a single step.)
 
 ## Part 2 - Runtime Error
 
