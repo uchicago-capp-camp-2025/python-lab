@@ -27,7 +27,7 @@ def main():
 
     # pick a word at random
     #word = random.choice(words)
-    word = words[0]
+    word = words[0]  # temporarily just use the first word 
 
     # play the game until they win or run out of guesses
     while Guesses > 0:
