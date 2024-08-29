@@ -64,7 +64,7 @@ This is because we often need the interpreter to reach the code with an error to
 
 Try entering the letter "b" to see the program behave as expected. Keep trying letters until you find one that crashes.
 
-Once you trigger the crash, resolve it and make a commit the same way you did for Part 1.
+Once you trigger the crash, resolve it and-- make a commit.
 
 ## Part 4 - Second Runtime Error
 
@@ -77,7 +77,7 @@ Consider the different things that the program does, track your guesses, what le
 
 If you'd like a hint take a look at hint3.md.
 
-When complete, make another commit!
+Once resolved, be sure to commit!
 
 ## Part 5 - Logic Error
 
