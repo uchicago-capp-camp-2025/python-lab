@@ -2,9 +2,9 @@
 
 The goal of this lab is to help you become more comfortable with working with Python, and the workflow introduced today.
 
-Since you are not expected to know how to write Python at this point this can feel challenging, but for this lab focus on what we've covered and feel free to discuss with peers.
+Since you are not expected to know how to write Python at this point this may feel intimidating, but for this lab focus on what we've covered and feel free to discuss with peers.
 
-In this lab you will be trying to get a program running.
+In this lab you will be trying to get a program running by correcting some errors.
 
 ## Tips
 
@@ -16,22 +16,48 @@ In this lab you will be trying to get a program running.
 
 ## Part 1 - Fixing Typos
 
-There are two intentional typos in the code you've been given that you'll need to fix.
+There are three intentional typos in the code you've been given that you'll need to fix.
 
-To find these, try running the code via `python3 game.py` and look at the errors you get.
+To find these, try running the code via `python3 game.py` and look at the first error you get:
 
-Do this until you see no more errors and are able to play a round of the game.
+```
+$ python3 game.py
+  File "/home/jturk/capp-camp-python-lab/game.py", line 24
+    revealed = ["_", "_", "_"
+               ^
+SyntaxError: '[' was never closed
+```
+
+Consider what this error message is telling you, and make the appropriate fix.
+
+Once that's done, try running the code again.
+
+Continue this until you see no more errors and are able to play a round of the game.
+
+**Reminder: Now that you've solved one part of the assignment, it is a good time to do a commit (and push) so you don't lose your work.**
+
+For example:
+
+```
+$ git commit -am "solved part 1"
+$ git push origin master
+```
 
 ## Part 2 - Runtime Error
 
 The code should now start to run, but depending on what letter you pick it may crash.
+Unlike syntax errors which can be detected automatically, some errors only arise under precise conditions.
 
-Try guessing the letter "r" and see what happens.
+This is because we often need the interpreter to reach the code with an error to know that such an error exists. For this reason you'll see these referred to as "runtime" errors.
+
+Try entering the letter "b" to see the program behave as expected. Keep trying letters until you find one that crashes.
+
+Once you trigger the crash, resolve it and make a commit the same way you did for Part 1.
 
 ## Part 3 - Second Runtime Error
 
 There's another condition that will reveal a mistake.
-For this one, we won't give you the exact condition right away, experiment with different input.
+For this one, we won't give you the exact condition right away, experiment with different input to try and trigger it.
 
 Thoroughly testing your program is a skill in and of itself.
 
@@ -39,16 +65,17 @@ Consider the different things that the program does, track your guesses, what le
 
 If you'd like a hint take a look at hint3.md.
 
-## Part 4 - Logic Errors
+When complete, make another commit!
 
-Note: This portion may feel like a bit of a stretch if you have never written code before, don't worry if that's the case for you & your partner.
+## Part 4 - Logic Errors
 
 Not all errors in code result in an error message, sometimes the code just does the incorrect thing and continues happily along.
 
 You have likely already noticed that the word does not change between runs of the game.
-Read through the code and see if you can determine the mistake.
 
-Hint: Perhaps the original author disabled something to help them test their own code.
+This is not a very fun game as a result, but without an error to go on it takes some understanding of the code to determine why this might be the case.
+
+**Since you are not expected to know how to read Python yet, this may be more of a stretch than the earlier assignments. There is a hint in hint4.md if you are stuck.**
 
 ## Submission
 
