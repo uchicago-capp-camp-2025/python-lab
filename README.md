@@ -32,7 +32,9 @@ Consider what this error message is telling you, and make the appropriate fix.
 
 Once that's done, try running the code again.
 
-Continue this until you see no more errors and are able to play a round of the game.
+There are a total of three errors to fix for this portion, including the one shown above.
+
+Continue the cycle of fixing and running the program until you see no more errors and are able to play a round of the game.
 
 **Reminder: Now that you've solved one part of the assignment, it is a good time to do a commit (and push) so you don't lose your work.**
 
@@ -75,10 +77,12 @@ You have likely already noticed that the word does not change between runs of th
 
 This is not a very fun game as a result, but without an error to go on it takes some understanding of the code to determine why this might be the case.
 
-**Since you are not expected to know how to read Python yet, this may be more of a stretch than the earlier assignments. There is a hint in hint4.md if you are stuck.**
+**Since you are not expected to know how to read Python yet, this may be more of a stretch than the earlier assignments.**
 
-## Submission
+There is a hint in hint4.md if you are stuck.
 
-We ask that you submit the assignment to Gradescope at the end, this will both give you practice with Gradescope and help us see how people fared (strictly for the purposes of revising this assignment for future camps).
+## Submitting Your Assignment
 
-TODO: Gradescope submission instructions
+Once your assignment is complete, be sure you have committed all changes and pushed your code to your GitHub Classroom repository using the command `git push`. This will sync the code on your remote GitHub branch (`main`) with the code from your current local branch of the same name. Afterwards, navigate to your repository and confirm that the code updates are present. View the commits you made and the files that have changed.
+
+Finally, go to the CAPP Camp [Gradescope course](https://www.gradescope.com/courses/834709) and click on the "Python Lab" assignment. Follow the instructions there for submitting your repository. An auto-grader will then run. If you completed the assignment correctly, your code should pass without any errors.
