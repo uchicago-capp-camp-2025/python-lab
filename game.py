@@ -1,4 +1,5 @@
 import random
+import sys
 
 words = [
     "air",
@@ -62,4 +63,6 @@ def main():
 
 
 if __name__ == "__main__":
+    if len(sys.argv) == 2:
+        random.seed(sys.argv[1])
     main()
