@@ -56,7 +56,7 @@ $ git push origin master
 
 ## Part 2 - Type Error
 
-After fixing the two typos, you will encounter a different kind of error. A TypeError indicates that you are attempting to use data in a way that is not possible.
+After fixing the two typos, you will encounter a different kind of error. A TypeError indicates that you are attempting to use data in a way that is not possible for that data's type.
 
 For example, there is no value Python can give for `"hello" + 123`, since this code adds variables of `str` and `int` type.
 So instead, you will see a `TypeError`.
@@ -72,7 +72,7 @@ This is because we often need the interpreter to reach the code with an error to
 
 Run the game via `python3 game.py` as before, and try entering the letter "b" as your first guess. The game should reflect the fact that there is no "b" in the word.
 
-Try and find a letter that crashes the program. Use that error message as you did before, and fix the error.
+Try and find a letter that crashes the program. Use the resulting error message as you did before, and fix the error.
 
 Remember to make a commit here as well!
 
