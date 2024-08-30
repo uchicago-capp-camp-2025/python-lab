@@ -14,6 +14,14 @@ In this lab you will be trying to get a program running by correcting some error
 - Don't let the fact that you likely do not understand the code yet get in your way, focus on the error messages you receive and they'll guide you to working code.
 - Feel free to experiment and make changes to the code to better understand it! You can always use `git diff` and `git restore` to undo those changes as needed.
 
+## The Game
+
+Within `game.py` you will find a small Python script that allows you to play a guessing game.
+
+In our game a random word is chosen from a list and players have six tries to guess the word-- guessing one letter at a time.
+
+Unfortunately it has a few bugs right now that we're going to need to fix.
+
 ## Part 1 - Syntax Errors
 
 There are two intentional typos in the code you've been given that you'll need to fix.
@@ -32,7 +40,7 @@ Consider what this error message is telling you, and make the appropriate fix.
 
 Once that's done, try running the code again and you will encounter one more SyntaxError.
 
-Continue the cycle of fixing and running the program until you see no more errors and are able to play a round of the game.
+Continue the cycle of fixing and running the program until you no longer see a SyntaxError. (When you see a TypeError, it is time to move to the next section.)
 
 **Reminder: Now that you've solved one part of the assignment, it is a good time to do a commit (and push) so you don't lose your work.**
 
@@ -53,7 +61,7 @@ After fixing the two typos, you will encounter a different kind of error. A Type
 For example, there is no value Python can give for `"hello" + 123`, since this code adds variables of `str` and `int` type.
 So instead, you will see a `TypeError`.
 
-Fix the `TypeError` that arises, and you should be able to begin to play the game.  Before you do, make another commit.
+Fix the `TypeError` that arises, and you should be able to begin to play the game. Before you do, make another commit.
 
 ## Part 3 - Runtime Error
 
@@ -62,18 +70,19 @@ Unlike syntax errors which can be detected automatically, some errors only arise
 
 This is because we often need the interpreter to reach the code with an error to know that such an error exists. For this reason you'll see these referred to as "runtime" errors.
 
-Try entering the letter "b" to see the program behave as expected. Keep trying letters until you find one that crashes.
+Run the game via `python3 game.py` as before, and try entering the letter "b" as your first guess. The game should reflect the fact that there is no "b" in the word.
 
-Once you trigger the crash, resolve it and-- make a commit.
+Try and find a letter that crashes the program. Use that error message as you did before, and fix the error.
+
+Remember to make a commit here as well!
 
 ## Part 4 - Second Runtime Error
 
-There's another condition that will reveal a mistake.
-For this one, we won't give you the exact condition right away, experiment with different input to try and trigger it.
+There's still another bug lurking in the program.
 
-Thoroughly testing your program is a skill in and of itself.
+For this one, we won't give you the exact condition right away. Experiment with different input to try and trigger it. Thoroughly testing your program is a skill in and of itself.
 
-Consider the different things that the program does, track your guesses, what letters have already been guessed, etc. Have you explored all of them?
+If you aren't having luck, consider the different things that the program is supposed to do. Track your guesses remaining, what letters have already been guessed, etc. Have you explored all of the functionality?
 
 If you'd like a hint take a look at hint3.md.
 
