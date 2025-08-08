@@ -2,34 +2,52 @@
 
 The goal of this lab is to help you become more comfortable with working with Python, and the workflow introduced today.
 
-Since you are not expected to know how to write Python at this point this may feel intimidating, but for this lab focus on what we've covered and feel free to discuss with peers.
+Since you are not expected to know how to write Python at this point this process may feel intimidating, but for this lab focus on what we've covered and feel free to discuss with peers.
 
 In this lab you will be trying to get a program running by correcting some errors.
 
 ## Tips
 
 - The focus of this lab is on the workflow we discussed: run the code, see an error, diagnose & fix, repeat.
-- Remember, the '#' character is a comment. You'll notice VSCode colors everything after that on a line line differently. Code following a '#' is not run.
-- Try to do this without relying too much on external resources or tools, you of course can and will use those in the future, but for today- practice with what is in front of you.
+- Remember, the '#' character is a comment. You'll notice VSCode colors everything after that on a line differently. Code following a '#' is not run.
+- Try to do this without relying too much on external resources or tools, you, of course, can and will use those in the future, but for today- practice with what is in front of you.
 - Don't let the fact that you likely do not understand the code yet get in your way, focus on the error messages you receive and they'll guide you to working code.
 - Feel free to experiment and make changes to the code to better understand it! You can always use `git diff` and `git restore` to undo those changes as needed.
 
 ## The Game
 
-Within `game.py` you will find a small Python script that allows you to play a guessing game.
+Our end goal is to have Python script that implements a game in which
+a word is chosen randomly from a list and players have six tries to
+guess the word-- guessing one letter at a time.  Additionally,
+repeated guesses should not be charged against the player's budget
+of six tries.
 
-In our game a random word is chosen from a list and players have six tries to guess the word-- guessing one letter at a time.
+The file `workflow_practice/game.py` contains a programmer's initial attempt to
+implement this game.  The programmer, very sensibly, decided to
+implement a simpler game to start.  Their game uses always uses the
+same word and it charges players for guessing the same letter multiple
+times.
 
-Unfortunately it has a few bugs right now that we're going to need to fix.
+Unfortunately, the program has a few bugs right now that you're going to
+need to fix.
+
+## Setup
+
+Before you get started on finding the errors, you should run `uv sync`
+in your ``python-lab`` directory to install the *dependencies*, that
+is, the Python tools and libraries that you need to do this lab.
+
+Once you have done the `uv sync`, you will want to change to the
+`workflow-practice` directory and open VS Code.
 
 ## Part 1 - Syntax Errors
 
-There are two intentional typos in the code you've been given that you'll need to fix.
+There are two syntax errors in the code you've been given that you'll need to fix.
 
-To find these, try running the code via `python3 game.py` and look at the first error you get:
+To find these, try running the code via `uv run python game.py` and look at the first error you get:
 
 ```
-$ python3 game.py
+$ uv run python game.py
   File "/home/jturk/capp-camp-python-lab/game.py", line 24
     revealed = ["_", "_", "_"
                ^
@@ -68,40 +86,100 @@ Fix the `TypeError` that arises, and you should be able to begin to play the gam
 The code should now start to run, but depending on what letter you pick it may crash.
 Unlike syntax errors which can be detected automatically, some errors only arise under precise conditions.
 
-This is because we often need the interpreter to reach the code with an error to know that such an error exists. For this reason you'll see these referred to as "runtime" errors.
+This situation occurs because we need the interpreter to reach the
+code with an error to know that such an error exists. For this reason
+you'll see these types of errors referred to as "runtime" errors.
 
-Run the game via `python3 game.py` as before, and try entering the letter "b" as your first guess. The game should reflect the fact that there is no "b" in the word.
+Run the game via `uv run python3 game.py` as before, and try entering the letter "b" as your first guess. The game should reflect the fact that there is no "b" in the word.
 
 Try and find a letter that crashes the program. Use the resulting error message as you did before, and fix the error.
 
 Remember to make a commit here as well!
 
-## Part 4 - Second Runtime Error
+## Part 4 - GitHub + Gradescope
 
-There's still another bug lurking in the program.
+We have been encouraging you to create commits as you complete each
+part.  If you have not done so, please create a commit now and sync
+the code on your remote GitHub branch (`main`) with the code from your
+current local branch of the same name. You can sync your local and
+remote branches using: `git push origin main`, the first time, and
+`git push`, subsequently.
+
+Once you have pushed your code, navigate to your repository on GitHub
+using a browser and confirm that your updates are present. View the
+commits you made and the files that have changed.  If any of your
+changes are missing, use `git status` to check the status of your
+files in your local branch.
+
+You will be using Gradescope to submit your work in many of your CS
+courses, including CAPP 30121.  By default, Gradescope allows students
+to upload their solutions as many times as they like before the
+deadline.  As you work on your assignments, it is a good idea to
+upload a draft solution well ahead of the deadline to make sure that
+you get something in before the deadline.  If you continue to work and
+make more progress, you can upload new versions as needed.  The
+instructor will grade the last submission that comes in before the
+deadline.
+
+Now is a good time to practice this process.  Go to the CAPP Camp [Gradescope course](https://www.gradescope.com/courses/834709), login with your CNetID and password, and click on the "Python Lab" assignment. Follow the instructions there for submitting your repository. An auto-grader will then run. If you completed the first few parts correctly, your code should pass the first test, but fail the second one.
+
+ADD FIGURES
+
+## Part 5 - Adding debugging Statements
+
+Now that the programmer has the basic functionality of the game
+working, they are ready to add code to choose the word-to-be-guessed
+randomly and to handle repeated guesses properly.
+
+Normally, the programmer would add merely add their code to
+``game.py``, but to simplify things for you, we have created a new
+script, called `game_repeats.py`, for this purpose.  For the rest of
+this lab, you will be working with `game_repeats.py`
+
+Give the new program a try: `uv run python game_repeats.py`.
+
+One thing that you may notice: from a testing perspective, it was
+awfully convenient to know the target word while you were testing!
+
+We can provide the same convenience by adding code to print the chosen
+word.  In general, adding thoughtfully designed and placed print
+statements can be very useful for debugging and testing purposes.
+
+We included a commented out version of an appropriate print statement
+in line 31.  To activate it: delete the `#` and the space that follows
+it, save the code, and try running it again.
+
+Notice that the print statement includes some text that explains the
+value that is being printed (`chosen word:`) in addition to the actual
+word.  It is always a good idea to label any value printed for
+debugging/testing purposes.
+
+
+## Part 6 - Another Runtime Error
+
+This new version a bug lurking within.
 
 For this one, we won't give you the exact condition right away. Experiment with different input to try and trigger it. Thoroughly testing your program is a skill in and of itself.
 
 If you aren't having luck, consider the different things that the program is supposed to do. Track your guesses remaining, what letters have already been guessed, etc. Have you explored all of the functionality?
 
-If you'd like a hint take a look at hint3.md.
+If you'd like a hint take a look at hint6.md.
 
 Once resolved, be sure to commit!
 
-## Part 5 - Logic Error
+## Part 7 - Remove your debugging statement
 
-Not all errors in code result in an error message, sometimes the code just does the incorrect thing and continues happily along.
+Now that the program is working, it is time to remove any code you
+added for debugging purposes.  Specifically, you will want to remove
+the print statement in Line 31!
 
-You have likely already noticed that the word does not change between runs of the game.
+Once you have done so.  Try your program again to make sure that your
+changes did not break the program and then create a commit.
 
-This is not a very fun game as a result, but without an error to go on it takes some understanding of the code to determine why this might be the case.
-
-**Since you are not expected to know how to read Python yet, this may be more of a stretch than the earlier assignments.**
-
-There is a hint in hint4.md if you are stuck.
 
 ## Submitting Your Assignment
 
-Once your assignment is complete, be sure you have committed all changes and pushed your code to your GitHub Classroom repository using the command `git push`. This will sync the code on your remote GitHub branch (`main`) with the code from your current local branch of the same name. Afterwards, navigate to your repository and confirm that the code updates are present. View the commits you made and the files that have changed.
+Once your assignment is complete, be sure you have committed all changes and pushed your code to your GitHub Classroom repository and then
+go to the "Python Lab" assignment on Gradescope and resubmit your repository.
 
-Finally, go to the CAPP Camp [Gradescope course](https://www.gradescope.com/courses/834709) and click on the "Python Lab" assignment. Follow the instructions there for submitting your repository. An auto-grader will then run. If you completed the assignment correctly, your code should pass without any errors.
+If you completed the assignment correctly, your code should pass the autograder without any errors.
