@@ -157,7 +157,7 @@ debugging/testing purposes.
 
 ## Part 6 - Another Runtime Error
 
-This new version a bug lurking within.
+This new version has a bug lurking within.
 
 For this one, we won't give you the exact condition right away. Experiment with different input to try and trigger it. Thoroughly testing your program is a skill in and of itself.
 

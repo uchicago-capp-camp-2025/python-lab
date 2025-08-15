@@ -1,1 +1,1 @@
-Hint for part 3: Try entering the same letter twice!
+Hint for part 6: Try entering the same letter twice!
