@@ -22,7 +22,7 @@ guess the word-- guessing one letter at a time.  Additionally,
 repeated guesses should not be charged against the player's budget
 of six tries.
 
-The file `workflow_practice/game.py` contains a programmer's initial attempt to
+The file `workflow-practice/game.py` contains a programmer's initial attempt to
 implement this game.  The programmer, very sensibly, decided to
 implement a simpler game to start.  Their game uses always uses the
 same word and it charges players for guessing the same letter multiple
@@ -34,7 +34,7 @@ need to fix.
 ## Setup
 
 Before you get started on finding the errors, you should run `uv sync`
-in your ``python-lab`` directory to install the *dependencies*, that
+in your ``workflow-lab`` directory to install the *dependencies*, that
 is, the Python tools and libraries that you need to do this lab.
 
 Once you have done the `uv sync`, you will want to change to the
@@ -48,7 +48,7 @@ To find these, try running the code via `uv run python game.py` and look at the 
 
 ```
 $ uv run python game.py
-  File "/home/jturk/capp-camp-python-lab/game.py", line 24
+  File "/home/jturk/capp-camp-workflow-lab/game.py", line 24
     revealed = ["_", "_", "_"
                ^
 SyntaxError: '[' was never closed
@@ -121,9 +121,44 @@ make more progress, you can upload new versions as needed.  The
 instructor will grade the last submission that comes in before the
 deadline.
 
-Now is a good time to practice this process.  Go to the CAPP Camp [Gradescope course](https://www.gradescope.com/courses/834709), login with your CNetID and password, and click on the "Python Lab" assignment. Follow the instructions there for submitting your repository. An auto-grader will then run. If you completed the first few parts correctly, your code should pass the first test, but fail the second one.
+Now is a good time to practice this process.   
 
-ADD FIGURES
+First, you will need to setup your Gradescope account.  Look in your email for a message from Gradescope and follow the link to set your password and immediately log into the site.
+
+![](images/gradescope-email.png)
+
+Once you set your password, you'll land on your Course Dashboard page: 
+
+![](images/gradescope-dashboard.png)
+
+Choose CAPP CAMP and then 
+
+ and click on the "Workflow Lab" assignment:
+
+ ![](images/gradescope-assignment-1.png)
+
+ Before you can submit your assignment, you will be asked to give Gradescope  access to your GitHub account:
+
+ ![](images/gradescope-github-connect.png) 
+
+ Follow the instructions to connect the two.
+
+ Once you have done so, you will be able to submit.  Choose your 
+ `workflow-lab-GITHUB_USERNAME` repository in the repository dropdown and `main`
+ in the branch dropdown and then click Upload:
+
+![](images/gradescope-submit.png)
+
+(This figure shows the repository for `ar0r-student`.  You will choose
+your own.)
+
+
+An auto-grader will then run. If you completed the first few parts correctly, 
+your code should pass the first two tests, but fail the third one.
+
+![](images/gradescope-with-bug-screenshot.png)
+
+
 
 ## Part 5 - Adding debugging Statements
 
@@ -180,6 +215,8 @@ changes did not break the program and then create a commit.
 ## Submitting Your Assignment
 
 Once your assignment is complete, be sure you have committed all changes and pushed your code to your GitHub Classroom repository and then
-go to the "Python Lab" assignment on Gradescope and resubmit your repository.
+go to the "Workflow Lab" assignment on Gradescope and resubmit your repository.
 
 If you completed the assignment correctly, your code should pass the autograder without any errors.
+
+![](images/gradescope-without-bug-screenshot.png)
