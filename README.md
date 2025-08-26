@@ -24,7 +24,7 @@ of six tries.
 
 The file `workflow-practice/game.py` contains a programmer's initial attempt to
 implement this game.  The programmer, very sensibly, decided to
-implement a simpler game to start.  Their game uses always uses the
+implement a simpler game to start.  Their game always uses the
 same word and it charges players for guessing the same letter multiple
 times.
 
