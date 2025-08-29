@@ -67,7 +67,7 @@ For example:
 ```
 $ git add -u
 $ git commit -m "solved part 1"
-$ git push origin master
+$ git push origin main
 ```
 
 (You can also use `git commit -am "solved part 1"` to combine `git add -u` and `git commit` into a single step.)
